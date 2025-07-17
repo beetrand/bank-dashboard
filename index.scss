@@ -517,7 +517,7 @@ header {
             margin: 2rem auto;
             .card-details-container {
                 margin: 0;
-                width: 95%;
+                width: 100%;
 
                 .card {
                     margin: 1.5rem auto;
@@ -530,10 +530,10 @@ header {
             grid-area: main;
             align-self: start;
             width: 90%;
-            margin: 0 auto 1.5rem auto;
+            margin: 1rem auto;
             .main-container {
                 margin: 0;
-                width: 95%;
+                width: 100%;
             }
         }
         .card-detail-area {

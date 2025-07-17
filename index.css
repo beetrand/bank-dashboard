@@ -468,7 +468,7 @@ header .title .user {
   }
   .container .card-detail-area .card-details-container {
     margin: 0;
-    width: 95%;
+    width: 100%;
   }
   .container .card-detail-area .card-details-container .card {
     margin: 1.5rem auto;
@@ -479,11 +479,11 @@ header .title .user {
     grid-area: main;
     align-self: start;
     width: 90%;
-    margin: 0 auto 1.5rem auto;
+    margin: 1rem auto;
   }
   .container .main-area .main-container {
     margin: 0;
-    width: 95%;
+    width: 100%;
   }
   .container .card-detail-area .spending-limits .spending-category .spending-progress {
     width: 100%;
