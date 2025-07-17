@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #262833;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: #43454d solid 1px;
+  background-color: #262833;
+}
+header .title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+header .title .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.container {
+  margin-top: 4.25rem;
+  display: flex;
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  color: white;
+}
+.container h2 {
+  font-size: 1rem;
+}
+.container a {
+  color: inherit;
+  text-decoration: none;
+}
+.container .card {
+  position: relative;
+  overflow: hidden;
+  width: 18.5rem;
+  height: 12.5rem;
+  background-color: white;
+  border-radius: 1rem;
+  color: black;
+}
+.container .card .card-bg-upper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65%;
+  background: #e3ece6;
+  z-index: 0;
+}
+.container .card .card-bg-lower {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: #73b06f;
+  z-index: 1;
+}
+.container .card .card-contents {
+  font-size: 1rem;
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-areas: "title chip" "name exp" "number visa";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr 1fr;
+  padding: 20px;
+  gap: 8px;
+  z-index: 2;
+}
+.container .card .card-contents .card-title {
+  grid-area: title;
+  text-align: left;
+}
+.container .card .card-contents .card-icon {
+  grid-area: chip;
+  text-align: right;
+}
+.container .card .card-contents .card-name {
+  align-self: start;
+  grid-area: name;
+  text-align: left;
+}
+.container .card .card-contents .card-expdate {
+  align-self: start;
+  grid-area: exp;
+  text-align: right;
+}
+.container .card .card-contents .card-number {
+  font-weight: 800;
+  font-size: 1.25rem;
+  align-self: end;
+  grid-area: number;
+  margin-top: 1rem;
+}
+.container .card .card-contents .card-visa-icon {
+  align-self: end;
+  grid-area: visa;
+  margin-top: 1rem;
+}
+.container .menu-area {
+  width: 13.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.45rem;
+}
+.container .menu-area .menu-title {
+  font-size: 0.7rem;
+  color: #e3ece6;
+  margin-bottom: 0.3rem;
+}
+.container .menu-area .menu-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.container .menu-area .settings {
+  margin-top: auto;
+}
+.container .menu-area a {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+}
+.container .menu-area a .label {
+  position: absolute;
+  right: 0rem;
+  top: 0.2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .menu-area a .new-label {
+  width: 2.3rem;
+  height: 1rem;
+  background-color: #e4d6f3;
+  font-size: 0.6rem;
+  color: black;
+}
+.container .menu-area a .count-label {
+  width: 1.5rem;
+  height: 1rem;
+  background-color: #43454d;
+  font-size: 0.6rem;
+  color: white;
+}
+.container .main-area {
+  flex: 1;
+  border: #43454d solid 1px;
+  width: 100%;
+  height: 100%;
+}
+.container .main-area .main-container {
+  width: 95%;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: #43454d solid 1px;
+}
+.container .main-area .main-container .inventory-details .balance-card {
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 10rem;
+  background-color: white;
+  border-radius: 1rem;
+  color: black;
+}
+.container .main-area .main-container .inventory-details .balance-card .card-bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: #e3ece6;
+  z-index: 1;
+}
+.container .main-area .main-container .inventory-details .balance-card .card-bg-right {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: #73b06f;
+  z-index: 1;
+  background-image: url("resources/background-decor.svg");
+  background-repeat: no-repeat;
+}
+.container .main-area .main-container .inventory-details .balance-card .card-contents {
+  font-size: 1rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 2;
+}
+.container .main-area .main-container .inventory-details .balance-card .card-contents .balance-info {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.container .main-area .main-container .inventory-details .balance-card .card-contents .balance-info .balance-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.container .main-area .main-container .inventory-details .balance-card .card-contents .details-sign {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding: 1.5rem;
+}
+.container .main-area .main-container .inventory-details .balance-card .card-contents .details-sign .content {
+  width: 7rem;
+  height: 2rem;
+  background-color: #e3ece6;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main-area .main-container .inventory-details2 .inventory-details-title {
+  margin-bottom: 2rem;
+}
+.container .main-area .main-container .inventory-details2 h2 {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.container .main-area .main-container .inventory-details2 .count-label {
+  border-radius: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1rem;
+  background-color: #43454d;
+  font-size: 0.6rem;
+  color: white;
+}
+.container .main-area .main-container .inventory-details2 .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.container .main-area .main-container .inventory-details2 .cards .card1 .card-bg-upper {
+  background: #e4d6f3;
+}
+.container .main-area .main-container .inventory-details2 .cards .card1 .card-bg-lower {
+  background: #a686c4;
+}
+.container .main-area .main-container .inventory-details2 .cards .card2 .card-bg-upper {
+  background: #f5ddc8;
+}
+.container .main-area .main-container .inventory-details2 .cards .card2 .card-bg-lower {
+  background: #e9ae79;
+}
+.container .main-area .main-container .inventory-details2 .cards .add-card {
+  width: 18.5rem;
+  height: 12.5rem;
+  border: #43454d dashed 2px;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main-area .main-container .dashboard-summary {
+  margin-top: 3rem;
+  width: 100%;
+  border: #43454d solid 1px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+  border-radius: 1rem;
+}
+.container .main-area .main-container .dashboard-summary .summary-item {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .main-area .main-container .dashboard-summary .summary-item .icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #73b06f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main-area .main-container .dashboard-summary .summary-item .earning-icon {
+  background-color: #73b06f;
+}
+.container .main-area .main-container .dashboard-summary .summary-item .spendings-icon {
+  background-color: #a686c4;
+}
+.container .main-area .main-container .dashboard-summary .summary-item .goals-icon {
+  background-color: #e9ae79;
+}
+.container .main-area .main-container .dashboard-summary .summary-item .summary-title {
+  color: #e3ece6;
+}
+.container .main-area .main-container .dashboard-summary .summary-item .summary-amount {
+  margin-top: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.container .card-detail-area {
+  width: 22rem;
+}
+.container .card-detail-area .card-details-container {
+  width: 80%;
+  margin: 1.5rem 1.64rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: #43454d solid 1px;
+}
+.container .card-detail-area .card-details-container .card-details-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.container .card-detail-area .card-details-container .card {
+  margin: 4rem 0;
+  transform: translate(-1.5rem, 0%) rotate(-90deg);
+  transform-origin: center center;
+}
+.container .card-detail-area .card-details-container .card .card-bg-upper {
+  background: #e3ece6;
+}
+.container .card-detail-area .card-details-container .card .card-bg-lower {
+  background: #73b06f;
+}
+.container .card-detail-area .card-details-container .card-info {
+  font-size: 0.8rem;
+}
+.container .card-detail-area .card-details-container .card-info .card-number-section .card-number-label {
+  margin-top: 1rem;
+}
+.container .card-detail-area .card-details-container .card-info .card-number-section .card-number {
+  margin: 0.3rem 0 1rem 0;
+  font-size: 1.25rem;
+}
+.container .card-detail-area .card-details-container .card-info .card-field {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.container .card-detail-area .card-details-container .card-info .card-field .card-field-group {
+  border-right: 1px solid #43454d;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+.container .card-detail-area .card-details-container .card-info .card-field .card-field-group:last-child {
+  border-right: none;
+}
+.container .card-detail-area .card-details-container .card-info .card-field .card-field-label {
+  margin-bottom: 0.5rem;
+}
+.container .card-detail-area .card-details-container .hr-line {
+  border-top: #43454d solid 2px;
+}
+.container .card-detail-area .card-details-container .spending-limits-title {
+  margin-top: 1.5rem;
+}
+.container .card-detail-area .card-details-container .spending-category {
+  margin-top: 1rem;
+}
+.container .card-detail-area .card-details-container .spending-category .spending-category-label {
+  font-size: 0.8rem;
+}
+.container .card-detail-area .card-details-container .spending-category .spending-progress {
+  width: 15rem;
+  height: 0.45rem;
+  position: relative;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+.container .card-detail-area .card-details-container .spending-category .spending-progress .spending-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background-color: rgb(0, 244, 33);
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+.container .card-detail-area .card-details-container .spending-amount {
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=index.css.map */

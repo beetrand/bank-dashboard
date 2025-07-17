@@ -1,0 +1,16 @@
+{
+  "name": "bank-dashboard",
+  "version": "1.0.0",
+  "description": "![Thumbnail for the Bank Dashboard - HBank coding challenge](./thumbnail.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@parcel/watcher-win32-x64": "^2.5.1",
+    "sass": "^1.89.2"
+  }
+}

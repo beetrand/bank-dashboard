@@ -1,0 +1,461 @@
+$white: #ffffff;
+$grey: #43454d;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: #262833;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: $grey solid 1px;
+    background-color: #262833;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+        }
+    }
+}
+.container {
+    margin-top: 4.25rem;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    color: white;
+    h2 {
+        font-size: 1rem;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    //クレジットカード共通デザイン
+    .card {
+        position: relative;
+        overflow: hidden;
+        width: 18.5rem;
+        height: 12.5rem;
+        background-color: white;
+        border-radius: 1rem;
+        color: black;
+        .card-bg-upper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 65%;
+            background: #e3ece6;
+            z-index: 0;
+        }
+
+        .card-bg-lower {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 35%;
+            background: #73b06f;
+            z-index: 1;
+        }
+        .card-contents {
+            font-size: 1rem;
+            position: relative;
+            height: 100%;
+            display: grid;
+            grid-template-areas:
+                "title chip"
+                "name exp"
+                "number visa";
+            grid-template-columns: 1fr auto;
+            grid-template-rows: auto 1fr 1fr;
+            padding: 20px;
+            gap: 8px;
+            z-index: 2;
+            .card-title {
+                grid-area: title;
+                text-align: left;
+            }
+            .card-icon {
+                grid-area: chip;
+                text-align: right;
+            }
+            .card-name {
+                align-self: start;
+                grid-area: name;
+                text-align: left;
+            }
+            .card-expdate {
+                align-self: start;
+                grid-area: exp;
+                text-align: right;
+            }
+            .card-number {
+                font-weight: 800;
+                font-size: 1.25rem;
+                align-self: end;
+                grid-area: number;
+                margin-top: 1rem;
+            }
+            .card-visa-icon {
+                align-self: end;
+                grid-area: visa;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .menu-area {
+        width: 13.5rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.45rem;
+
+        .menu-title {
+            font-size: 0.7rem;
+            color: #e3ece6;
+            margin-bottom: 0.3rem;
+        }
+        .menu-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .settings {
+            margin-top: auto;
+        }
+        a {
+            position: relative;
+            display: flex;
+            gap: 0.5rem;
+
+            .label {
+                position: absolute;
+                right: 0rem;
+                top: 0.2rem;
+
+                border-radius: 1rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .new-label {
+                width: 2.3rem;
+                height: 1rem;
+                background-color: #e4d6f3;
+                font-size: 0.6rem;
+                color: black;
+            }
+
+            .count-label {
+                width: 1.5rem;
+                height: 1rem;
+                background-color: #43454d;
+                font-size: 0.6rem;
+                color: white;
+            }
+        }
+    }
+
+    .main-area {
+        flex: 1;
+        border: $grey solid 1px;
+        width: 100%;
+        height: 100%;
+        .main-container {
+            width: 95%;
+            margin: 1.5rem auto;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: $grey solid 1px;
+
+            .inventory-details {
+                .balance-card {
+                    margin: 2rem 0;
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 10rem;
+                    background-color: white;
+                    border-radius: 1rem;
+                    color: black;
+                    .card-bg-left {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        height: 100%;
+                        width: 50%;
+                        background: #e3ece6;
+                        z-index: 1;
+                    }
+
+                    .card-bg-right {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        right: 0;
+                        height: 100%;
+                        width: 50%;
+                        background: #73b06f;
+                        z-index: 1;
+                        background-image: url("resources/background-decor.svg");
+                        background-repeat: no-repeat;
+                    }
+                    .card-contents {
+                        font-size: 1rem;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        z-index: 2;
+
+                        .balance-info {
+                            flex: 1;
+                            padding: 1rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 1rem;
+
+                            .balance-amount {
+                                font-size: 1.5rem;
+                                font-weight: bold;
+                            }
+                        }
+                        .details-sign {
+                            flex: 1;
+                            display: flex;
+                            justify-content: end;
+                            align-items: end;
+                            padding: 1.5rem;
+                            .content {
+                                width: 7rem;
+                                height: 2rem;
+                                background-color: #e3ece6;
+                                border-radius: 2rem;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .inventory-details2 {
+                .inventory-details-title {
+                    margin-bottom: 2rem;
+                }
+                h2 {
+                    display: inline-block;
+                    margin-right: 0.5rem;
+                }
+                .count-label {
+                    border-radius: 1rem;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 1.5rem;
+                    height: 1rem;
+                    background-color: #43454d;
+                    font-size: 0.6rem;
+                    color: white;
+                }
+                .cards {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+
+                    .card1 {
+                        .card-bg-upper {
+                            background: #e4d6f3;
+                        }
+
+                        .card-bg-lower {
+                            background: #a686c4;
+                        }
+                    }
+                    .card2 {
+                        .card-bg-upper {
+                            background: #f5ddc8;
+                        }
+
+                        .card-bg-lower {
+                            background: #e9ae79;
+                        }
+                    }
+                    .add-card {
+                        width: 18.5rem;
+                        height: 12.5rem;
+                        border: $grey dashed 2px;
+                        border-radius: 1rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .dashboard-summary {
+                margin-top: 3rem;
+                width: 100%;
+                border: $grey solid 1px;
+                padding: 1.5rem;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                row-gap: 1.5rem;
+                border-radius: 1rem;
+                .summary-item {
+                    width: 10rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .icon {
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 0.5rem;
+                        overflow: hidden;
+                        background-color: #73b06f;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .earning-icon {
+                        background-color: #73b06f;
+                    }
+                    .spendings-icon {
+                        background-color: #a686c4;
+                    }
+                    .goals-icon {
+                        background-color: #e9ae79;
+                    }
+
+                    .summary-title {
+                        color: #e3ece6;
+                    }
+                    .summary-amount {
+                        margin-top: 0.3rem;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-detail-area {
+        width: 22rem;
+
+        .card-details-container {
+            width: 80%;
+            margin: 1.5rem 1.64rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: $grey solid 1px;
+            .card-details-label {
+                font-size: 1rem;
+                font-weight: 600;
+                color: $white;
+            }
+            .card {
+                margin: 4rem 0;
+                transform: translate(-1.5rem, 0%) rotate(-90deg);
+                transform-origin: center center;
+                .card-bg-upper {
+                    background: #e3ece6;
+                }
+
+                .card-bg-lower {
+                    background: #73b06f;
+                }
+            }
+
+            .card-info {
+                font-size: 0.8rem;
+                .card-number-section {
+                    .card-number-label {
+                        margin-top: 1rem;
+                    }
+                    .card-number {
+                        margin: 0.3rem 0 1rem 0;
+                        font-size: 1.25rem;
+                    }
+                }
+
+                .card-field {
+                    display: flex;
+                    margin-bottom: 1rem;
+                    .card-field-group {
+                        border-right: 1px solid $grey;
+                        padding-right: 0.5rem;
+                        padding-left: 0.5rem;
+
+                        &:last-child {
+                            border-right: none;
+                        }
+                    }
+                    .card-field-label {
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+            .hr-line {
+                border-top: $grey solid 2px;
+            }
+            .spending-limits-title {
+                margin-top: 1.5rem;
+            }
+
+            .spending-category {
+                margin-top: 1rem;
+
+                .spending-category-label {
+                    font-size: 0.8rem;
+                }
+
+                .spending-progress {
+                    width: 15rem;
+                    height: 0.45rem;
+                    position: relative;
+                    background-color: white;
+                    border-radius: 0.5rem;
+                    margin-top: 1rem;
+
+                    .spending-progress-bar {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 40%;
+                        height: 100%;
+                        background-color: rgb(0, 244, 33);
+                        border-radius: 0.5rem;
+                        z-index: 1;
+                    }
+                }
+            }
+
+            .spending-amount {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
