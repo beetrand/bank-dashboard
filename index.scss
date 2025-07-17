@@ -34,9 +34,9 @@ header {
 .container {
     margin-top: 4.25rem;
     display: flex;
-    width: 100vw;
     height: auto;
     min-height: 100vh;
+    min-width: 400px;
     color: white;
 
     @media (max-width: 768px) {
@@ -192,7 +192,7 @@ header {
         flex: 1;
         border: $grey solid 1px;
         width: 100%;
-        height: 100%;
+        height: auto;
         .main-container {
             width: 95%;
             margin: 1.5rem auto;
@@ -381,8 +381,8 @@ header {
         width: 22rem;
 
         .card-details-container {
-            width: 80%;
-            margin: 1.5rem 1.64rem;
+            width: 85%;
+            margin: 1.5rem auto;
             padding: 1rem;
             border-radius: 1rem;
             border: $grey solid 1px;
@@ -514,7 +514,7 @@ header {
             grid-area: card-detail;
             align-self: start;
             width: 90%;
-            margin: 2rem 1.5rem;
+            margin: 2rem auto;
             .card-details-container {
                 margin: 0;
                 width: 95%;
@@ -530,7 +530,7 @@ header {
             grid-area: main;
             align-self: start;
             width: 90%;
-            margin: 0 1.5rem 1.5rem 1.5rem;
+            margin: 0 auto 1.5rem auto;
             .main-container {
                 margin: 0;
                 width: 95%;
