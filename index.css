@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +38,15 @@ header .title .user {
   height: auto;
   min-height: 100vh;
   color: white;
+}
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    grid-template-rows: 1fr 1fr; /* 上下2段 */
+    grid-template-areas: "menu top" "menu bottom";
+    height: auto;
+  }
 }
 .container h2 {
   font-size: 1rem;
@@ -161,6 +171,9 @@ header .title .user {
   background-color: #43454d;
   font-size: 0.6rem;
   color: white;
+}
+.container .menu-area a:hover {
+  font-size: 1.05rem;
 }
 .container .main-area {
   flex: 1;
@@ -414,6 +427,56 @@ header .title .user {
 }
 .container .card-detail-area .card-details-container .spending-amount {
   margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 2.8rem 1fr;
+    grid-template-areas: "menu card-detail" "menu main";
+    grid-template-rows: auto auto;
+  }
+  .container .menu-area {
+    padding: 1.5rem 0.7rem;
+    width: 100%;
+    grid-area: menu;
+    gap: 1.2rem;
+    border-right: 1px solid #43454d;
+  }
+  .container .menu-area .menu-title {
+    display: none;
+  }
+  .container .menu-area a .label {
+    display: none;
+  }
+  .container .menu-area a .content {
+    display: none;
+  }
+  .container .card-detail-area {
+    grid-area: card-detail;
+    align-self: start;
+    width: 90%;
+    margin: 2rem 1.5rem;
+  }
+  .container .card-detail-area .card-details-container {
+    margin: 0;
+    width: 100%;
+  }
+  .container .card-detail-area .card-details-container .card {
+    margin: 1.5rem auto;
+    transform: none;
+  }
+  .container .main-area {
+    border: none;
+    grid-area: main;
+    align-self: start;
+    width: 90%;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+  }
+  .container .main-area .main-container {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

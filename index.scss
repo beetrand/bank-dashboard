@@ -38,6 +38,16 @@ header {
     height: auto;
     min-height: 100vh;
     color: white;
+
+    @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: 10rem 1fr;
+        grid-template-rows: 1fr 1fr; /* 上下2段 */
+        grid-template-areas:
+            "menu top"
+            "menu bottom";
+        height: auto;
+    }
     h2 {
         font-size: 1rem;
     }
@@ -170,6 +180,10 @@ header {
                 background-color: #43454d;
                 font-size: 0.6rem;
                 color: white;
+            }
+
+            &:hover {
+                font-size: 1.05rem;
             }
         }
     }
@@ -455,6 +469,63 @@ header {
 
             .spending-amount {
                 margin-top: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 2.8rem 1fr;
+        grid-template-areas:
+            "menu card-detail"
+            "menu main";
+        grid-template-rows: auto auto;
+
+        .menu-area {
+            padding: 1.5rem 0.7rem;
+            width: 100%;
+            grid-area: menu;
+            gap: 1.2rem;
+            border-right: 1px solid $grey;
+            .menu-title {
+                display: none;
+            }
+            a {
+                .label {
+                    display: none;
+                }
+
+                .content {
+                    display: none;
+                }
+            }
+        }
+        .card-detail-area {
+            grid-area: card-detail;
+            align-self: start;
+            width: 90%;
+            margin: 2rem 1.5rem;
+            .card-details-container {
+                margin: 0;
+                width: 100%;
+
+                .card {
+                    margin: 1.5rem auto;
+                    transform: none;
+                }
+            }
+        }
+        .main-area {
+            border: none;
+            grid-area: main;
+            align-self: start;
+            width: 90%;
+            margin: 0 1.5rem 1.5rem 1.5rem;
+            .main-container {
+                margin: 0;
+                width: 100%;
             }
         }
     }
