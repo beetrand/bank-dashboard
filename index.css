@@ -468,7 +468,7 @@ header .title .user {
   }
   .container .card-detail-area .card-details-container {
     margin: 0;
-    width: 100%;
+    width: 95%;
   }
   .container .card-detail-area .card-details-container .card {
     margin: 1.5rem auto;
@@ -483,7 +483,7 @@ header .title .user {
   }
   .container .main-area .main-container {
     margin: 0;
-    width: 100%;
+    width: 95%;
   }
   .container .card-detail-area .spending-limits .spending-category .spending-progress {
     width: 100%;
