@@ -278,6 +278,7 @@ header .title .user {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  row-gap: 1.5rem;
 }
 .container .main-area .main-container .inventory-details2 .cards .card1 .card-bg-upper {
   background: #e4d6f3;
@@ -301,7 +302,7 @@ header .title .user {
   align-items: center;
 }
 .container .main-area .main-container .dashboard-summary {
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: 100%;
   border: #43454d solid 1px;
   padding: 1.5rem;
@@ -389,13 +390,20 @@ header .title .user {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
+.container .card-detail-area .card-details-container .card-info .card-field .card-field-group:first-child {
+  padding-left: 0;
+}
 .container .card-detail-area .card-details-container .card-info .card-field .card-field-group:last-child {
   border-right: none;
 }
 .container .card-detail-area .card-details-container .card-info .card-field .card-field-label {
   margin-bottom: 0.5rem;
 }
+.container .card-detail-area .card-details-container .card-info .card-field .card-field-value {
+  font-size: 1rem;
+}
 .container .card-detail-area .card-details-container .hr-line {
+  margin-top: 2rem;
   border-top: #43454d solid 2px;
 }
 .container .card-detail-area .card-details-container .spending-limits-title {
@@ -421,7 +429,7 @@ header .title .user {
   left: 0;
   width: 40%;
   height: 100%;
-  background-color: rgb(0, 244, 33);
+  background-color: #73b06f;
   border-radius: 0.5rem;
   z-index: 1;
 }
@@ -475,6 +483,9 @@ header .title .user {
   }
   .container .main-area .main-container {
     margin: 0;
+    width: 100%;
+  }
+  .container .card-detail-area .spending-limits .spending-category .spending-progress {
     width: 100%;
   }
 }

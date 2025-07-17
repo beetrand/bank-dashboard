@@ -296,6 +296,7 @@ header {
                     display: flex;
                     flex-wrap: wrap;
                     gap: 2rem;
+                    row-gap: 1.5rem;
 
                     .card1 {
                         .card-bg-upper {
@@ -328,7 +329,7 @@ header {
             }
 
             .dashboard-summary {
-                margin-top: 3rem;
+                margin-top: 2rem;
                 width: 100%;
                 border: $grey solid 1px;
                 padding: 1.5rem;
@@ -423,6 +424,9 @@ header {
                         padding-right: 0.5rem;
                         padding-left: 0.5rem;
 
+                        &:first-child {
+                            padding-left: 0;
+                        }
                         &:last-child {
                             border-right: none;
                         }
@@ -430,9 +434,13 @@ header {
                     .card-field-label {
                         margin-bottom: 0.5rem;
                     }
+                    .card-field-value {
+                        font-size: 1rem;
+                    }
                 }
             }
             .hr-line {
+                margin-top: 2rem;
                 border-top: $grey solid 2px;
             }
             .spending-limits-title {
@@ -460,7 +468,7 @@ header {
                         left: 0;
                         width: 40%;
                         height: 100%;
-                        background-color: rgb(0, 244, 33);
+                        background-color: #73b06f;
                         border-radius: 0.5rem;
                         z-index: 1;
                     }
@@ -525,6 +533,11 @@ header {
             margin: 0 1.5rem 1.5rem 1.5rem;
             .main-container {
                 margin: 0;
+                width: 100%;
+            }
+        }
+        .card-detail-area {
+            .spending-limits .spending-category .spending-progress {
                 width: 100%;
             }
         }
